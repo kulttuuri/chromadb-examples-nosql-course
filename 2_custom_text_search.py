@@ -79,22 +79,10 @@ collection.add(
 
 print(f"Added {len(collection.get(ids=[])['ids'])} documents to the collection in {time.time() - start_time:.2f}s")
 
-# Debugging step to inspect the structure of document_data
-doc_id = "1"
-document_data = collection.get(ids=[doc_id], include=['embeddings', 'metadatas'])
-
-# Print the entire document_data to see its structure
-print(f"Document data for {doc_id}: {document_data}")
-
-# Debug:
-# Print out vector embedding with metadata for id 1
-# Retrieve the metadata and vector embedding for document with ID '1'
+# Debugging step to inspect the structure of the document 1
 #doc_id = "1"
 #document_data = collection.get(ids=[doc_id], include=['embeddings', 'metadatas'])
-#metadata = document_data['metadatas'][0]
-#print(f"\n\nMetadata for document {doc_id}: {metadata}")
-#vector_embedding = document_data['embeddings'][0]
-#print(f"\nVector embedding for document {doc_id}: {vector_embedding}")
+#print(f"Document data for {doc_id}: {document_data}")
 
 ###
 # 4. FIND THE MOST SIMILAR / CLOSEST RESULTS TO A GIVEN TEXT.
