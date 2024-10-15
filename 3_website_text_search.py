@@ -27,7 +27,7 @@ embedder.normalization_method = "L2"
 ###
 
 # Create a collection to hold our data
-collection_name = "text_embeddings"
+collection_name = "website_text_embeddings"
 collection = client.create_collection(
     name = collection_name,
     # Configure the distance / similarity metric below.
