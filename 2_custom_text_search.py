@@ -48,31 +48,31 @@ else: print("Vector normalization is disabled")
 start_time = time.time()
 
 collection.add(
-    embeddings=[embedder.text_to_vector("print('Hello world!')", True)],
+    embeddings=[embedder.text_to_vector("print('Hello world!')")],
     metadatas=[{ "text": "print('Hello world!')" }],
     ids=["1"]
 )
 
 collection.add(
-    embeddings=[embedder.text_to_vector("std::cout('Hello world!')", True)],
+    embeddings=[embedder.text_to_vector("std::cout('Hello world!')")],
     metadatas=[{ "text": "std::cout('Hello world!')" }],
     ids=["2"]
 )
 
 collection.add(
-    embeddings=[embedder.text_to_vector("This is just a random document", True)],
+    embeddings=[embedder.text_to_vector("This is just a random document")],
     metadatas=[{ "text": "This is just a random document" }],
     ids=["3"]
 )
 
 collection.add(
-    embeddings=[embedder.text_to_vector("Here we discuss about the transformers architecture.", True)],
+    embeddings=[embedder.text_to_vector("Here we discuss about the transformers architecture.")],
     metadatas=[{ "text": "Here we discuss about the transformers architecture." }],
     ids=["4"]
 )
 
 collection.add(
-    embeddings=[embedder.text_to_vector("Hawaii", True)],
+    embeddings=[embedder.text_to_vector("Hawaii")],
     metadatas=[{ "text": "Hawaii" }],
     ids=["5"]
 )
