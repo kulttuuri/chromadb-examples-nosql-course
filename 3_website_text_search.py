@@ -36,7 +36,7 @@ collection = client.create_collection(
     # Note that the cosine and ip is also transferred to distance metric, thus lower number is always better match.
     metadata = { "hnsw:space": "cosine" },
     embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(
-        device="cuda", normalize_embeddings=True)
+        device="cuda", normalize_embeddings=embedder.normalize)
 )
 
 print("Distance / similarity metric used: " + str(collection.metadata))
