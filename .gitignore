@@ -1,3 +1,4 @@
 __pycache__
 image_vector_embeddings.json
 dbs/
+.venv

@@ -3,11 +3,10 @@
 These files are meant to be used with a NoSQL course.
 
 ## Setting up the Environment
-Install these pip packages:
 
-```
-pip install chromadb==0.5.13
-pip install "numpy<2"
+
+```bash
+source setup.bash
 ```
 
 ## Image Source

@@ -1,6 +1,7 @@
 import os
 import time
 import chromadb
+from chromadb.utils import embedding_functions
 from embedding_helper_class import TextEmbeddingGenerator
 
 client = chromadb.Client()
@@ -33,7 +34,9 @@ collection = client.create_collection(
     # Configure the distance / similarity metric below.
     # Can be: "l2" (euclidean), "cosine", or "ip" (inner product).
     # Note that the cosine and ip is also transferred to distance metric, thus lower number is always better match.
-    metadata = { "hnsw:space": "ip" }
+    metadata = { "hnsw:space": "ip" },
+    embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(
+        device="cuda", normalize_embeddings=True)
 )
 
 print("Distance / similarity metric used: " + str(collection.metadata))
