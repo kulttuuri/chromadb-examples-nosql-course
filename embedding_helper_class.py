@@ -260,7 +260,8 @@ class ImageEmbeddingGenerator:
                 img_path = os.path.join(images_folder, filename)
                 try:
                     vector_embedding = self.get_image_vector_embedding(img_path)
-                    vector_embedding_list = vector_embedding.tolist()
+                    # Convert NumPy array or float32 elements to Python native types
+                    vector_embedding_list = [float(val) for val in vector_embedding]
                     embeddings_list.append({"filename": filename, "vector_embedding": vector_embedding_list})
                 except Exception as e:
                     print(f"Error processing {filename}: {e}")
