@@ -1,0 +1,5 @@
+chromadb==0.5.13
+numpy<2
+sentence-transformers==3.3.0
+torchvision==0.20.1
+beautifulsoup4==4.12.3
