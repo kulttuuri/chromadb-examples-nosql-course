@@ -3,3 +3,4 @@ numpy<2
 sentence-transformers==3.3.0
 torchvision==0.20.1
 beautifulsoup4==4.12.3
+posthog>=2.4.0,<6.0.0
